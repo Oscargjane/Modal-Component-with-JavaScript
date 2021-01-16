@@ -1,0 +1,55 @@
+/* BTN */
+%btn {
+  font-family: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+  outline: none;
+  border-radius: $btn-border;
+  cursor: pointer;
+  transform: translateY(0) scale(1);
+  transition: all 0.2s;
+
+  &:hover {
+    transform: translateY(-2px) scale(1.05);
+  }
+
+  &:active {
+    transform: translateY(1px) scale(1.05);
+  }
+}
+
+%btn-modal {
+  text-transform: uppercase;
+  padding: 1rem 2.5rem;
+}
+
+.btn {
+  &-show-modal {
+    @extend %btn;
+    @include set-styles-button($bg-color: $color-white);
+    padding: 1rem 3.5rem;
+
+    @include respond($tab-port-small) {
+      &:not(:last-child) {
+        margin-bottom: 0.8rem;
+      }
+    }
+  }
+
+  &-box {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &-close-modal {
+    @extend %btn;
+    @extend %btn-modal;
+    @include set-styles-button($font-size: 1.5rem);
+  }
+
+  &-save-modal {
+    @extend %btn;
+    @extend %btn-modal;
+    @include set-styles-button(1.5rem, $color-primary);
+  }
+}

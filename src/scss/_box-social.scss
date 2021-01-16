@@ -1,0 +1,40 @@
+.box-social {
+  grid-column: 3 / -1;
+
+  display: flex;
+  align-items: center;
+  padding-top: 1.8rem;
+
+  @include respond($tab-port-small) {
+    grid-column: 2 / 3;
+    padding-top: 0;
+  }
+
+  &__item {
+    list-style: none;
+    transform: translate(0) scale(1);
+    transition: all 0.3s;
+
+    &:not(:last-of-type) {
+      margin-right: 1.5rem;
+    }
+
+    &:hover {
+      transform: translateY(-2px) scale(1.1);
+    }
+
+    &:active {
+      transform: translateY(0);
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+  }
+
+  &__icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    fill: $color-gray-light-2;
+  }
+}

@@ -1,0 +1,70 @@
+.footer {
+  height: 20rem;
+  padding-top: 8rem;
+  background: url(../img/footer.svg) no-repeat;
+  background-size: cover;
+
+  display: grid;
+  grid-template-columns: 1fr minmax(50%, min-content) 1fr;
+  align-content: center;
+  justify-items: center;
+  grid-column-gap: 2.5rem;
+
+  @include respond($big-desktop) {
+    height: 24rem;
+    padding-top: 10rem;
+  }
+
+  @include respond($tab-port-small) {
+    height: 25rem;
+    padding-top: 10rem;
+    grid-template-columns: 1fr minmax(80%, min-content) 1fr;
+    grid-column-gap: 0;
+    grid-row-gap: 1.5rem;
+  }
+
+  @include respond($phone) {
+    height: 20rem;
+    padding-top: 8rem;
+    grid-template-columns: 1fr minmax(90%, min-content) 1fr;
+  }
+
+  @include respond($phone-small) {
+    height: 30rem;
+    padding-top: 14rem;
+  }
+
+  &__text {
+    grid-column: 2 / 3;
+
+    font-size: 1.3rem;
+    text-align: center;
+    color: $color-gray-light-1;
+
+    &--big {
+      font-size: 1.6rem;
+      line-height: 2;
+      color: $color-gray-light-2;
+    }
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      padding-bottom: 0.2rem;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      color: inherit;
+      transition: all 0.3s;
+
+      @media (hover: none) and (pointer: coarse) {
+        border-bottom: 1px solid $color-gray-light-3;
+      }
+    }
+
+    &:hover,
+    &:active {
+      border-bottom: 1px solid $color-gray-light-3;
+    }
+  }
+}

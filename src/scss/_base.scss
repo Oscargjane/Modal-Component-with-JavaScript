@@ -1,0 +1,62 @@
+%global-reset {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+* {
+  @extend %global-reset;
+}
+*::before {
+  @extend %global-reset;
+}
+*::after {
+  @extend %global-reset;
+}
+
+html {
+  box-sizing: border-box;
+  /* 1rem = 10px; 10px/16px = 62.5% */
+  font-size: 62.5%;
+
+  @include respond($big-desktop) {
+    /* 1rem = 12px; 12px/16px = 75% */
+    font-size: 75%;
+  }
+
+  @include respond($tab-land) {
+    /* 1rem = 9px; 9px/16px = 56.25% */
+    font-size: 56.25%;
+  }
+
+  @include respond($tab-port) {
+    /* 1rem = 8px; 8px/16px = 50% */
+    font-size: 50%;
+  }
+}
+
+body {
+  min-height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.6;
+  letter-spacing: 0.1rem;
+  background-color: $color-gray-light-2;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-top: 2rem;
+  font-size: 1.8rem;
+  position: relative;
+  z-index: 1000;
+
+  @include respond($tab-port-small) {
+    flex-direction: column;
+  }
+}

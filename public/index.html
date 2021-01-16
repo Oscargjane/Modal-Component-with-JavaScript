@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <script defer src="../src/js/app.js"></script>
+    <title>Modal Component</title>
+  </head>
+  <body>
+    <main class="container">
+      <button
+        type="button"
+        class="btn-show-modal btn-show-modal--js"
+        data-size="small"
+      >
+        Show Small Modal
+      </button>
+      <button
+        type="button"
+        class="btn-show-modal btn-show-modal--js"
+        data-size="regular"
+      >
+        Show Regular Modal
+      </button>
+      <button
+        type="button"
+        class="btn-show-modal btn-show-modal--js"
+        data-size="large"
+      >
+        Show Large Modal
+      </button>
+      <div
+        class="modal-container modal-container--hidden modal-container--js"
+      ></div>
+    </main>
+    <footer class="footer">
+      <p class="footer__text">
+        <span class="footer__text--big">Made with 🧡 by Oscar G Jané</span
+        ><br />My version of Modal Window! project from Jonas Schmedtmann
+        course:
+        <a
+          href="https://www.udemy.com/course/the-complete-javascript-course/"
+          class="footer__link"
+          >The Complete JavaScript Course 2020: From Zero to Expert!</a
+        >
+      </p>
+      <ul class="box-social">
+        <li class="box-social__item">
+          <a href="https://twitter.com/OscarJan18" class="box-social__link">
+            <svg class="box-social__icon">
+              <use href="../src/img/sprite.svg#icon-twitter"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="box-social__item">
+          <a href="https://github.com/Oscargjane" class="box-social__link">
+            <svg class="box-social__icon">
+              <use href="../src/img/sprite.svg#icon-github"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="box-social__item">
+          <a
+            href="https://www.linkedin.com/in/oscar-gonz%C3%A1lez-frontend-dev/"
+            class="box-social__link"
+          >
+            <svg class="box-social__icon">
+              <use href="../src/img/sprite.svg#icon-linkedin2"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </footer>
+  </body>
+</html>

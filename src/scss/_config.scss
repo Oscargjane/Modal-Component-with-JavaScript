@@ -1,0 +1,87 @@
+//////////////////////////////////////
+// FUNCTIONS
+// Return a color based on the background
+@function set-color($bg-color: transparent) {
+  @if $bg-color == $color-white {
+    @return $color-gray-dark;
+  }
+  @if $bg-color == $color-primary {
+    @return $color-gray-light-2;
+  }
+  @return $color-secondary;
+}
+
+// Convert from px to em
+// 16px --> browser default font size
+// 1em = 16px
+// Exp. --- 600px / 16px = 37.5em
+@function calc-em($pixels, $context: $browser-context) {
+  @return #{$pixels / $context}em;
+}
+
+//////////////////////////////////////
+// VARIABLES
+// Browser default font size
+$browser-context: 16;
+
+// Breakpoints converted from px to em
+$phone-small: calc-em(450);
+$phone: calc-em(600);
+$tab-port-small: calc-em(750);
+$tab-port: calc-em(850);
+$tab-land: calc-em(1150);
+$big-desktop: calc-em(1800);
+
+// Colors
+$color-primary: #e08e61;
+$color-secondary: hsl(355, 49%, 54%);
+$color-white: hsl(0, 0%, 97%);
+$color-gray-light-1: hsl(0, 0%, 90%);
+$color-gray-light-2: hsl(0, 0%, 93%);
+$color-gray-light-3: hsl(0, 0%, 87%);
+$color-gray-dark: hsl(0, 0%, 20%);
+
+$color-shadow-modal: hsla(0, 0%, 20%, 0.2);
+$color-gradient-modal: hsla(0, 0%, 90%, 0.5);
+
+// Border
+$modal-border: 0.5rem;
+$btn-border: 5rem;
+
+//////////////////////////////////////
+// MIXINS
+// You set styles to button elements
+@mixin set-styles-button($font-size: inherit, $bg-color: transparent) {
+  @if $bg-color == $color-white {
+    border: 0.3rem solid $color-primary;
+  }
+  @if $bg-color == $color-primary or $bg-color == transparent {
+    border: none;
+  }
+  font-size: $font-size;
+  background-color: $bg-color;
+  color: set-color($bg-color);
+}
+
+//////////////////////////////////////
+// Media Queries
+
+// MEDIA QUERY MANAGER
+// 0 - 600px:         Phone
+// 600px - 900px:     Tablet portrait
+// 900px - 1200px:    Tablet landscape
+// [1200px - 1800px] is where the normal styles apply
+// 1800px + :         Big desktop
+
+@mixin respond($breakpoint) {
+  @if $breakpoint != $big-desktop {
+    @media only screen and (max-width: $breakpoint) {
+      @content;
+    }
+  }
+  @if $breakpoint == $big-desktop {
+    @media only screen and (min-width: $breakpoint) {
+      @content;
+    }
+  }
+}
