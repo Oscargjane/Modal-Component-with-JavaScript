@@ -1,4 +1,6 @@
-# Modal Component [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=Check%20out%20this%20cool%20project&url=https://github.com/Cool/Project&hashtags=project,opensource) [![Netlify Status](https://api.netlify.com/api/v1/badges/4bea8605-3f78-4656-bea7-b77b5311b191/deploy-status)](https://app.netlify.com/sites/modal-component/deploys)[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
+# Modal Component [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=Check%20out%20this%20cool%20project&url=https://github.com/Cool/Project&hashtags=project,opensource)
+
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier) [![Netlify Status](https://api.netlify.com/api/v1/badges/4bea8605-3f78-4656-bea7-b77b5311b191/deploy-status)](https://app.netlify.com/sites/modal-component/deploys)
 
 #### Simple modal component made with JavaScript, fully adapted for different mobile devices, created to practice working with JavaScript classes.
 
