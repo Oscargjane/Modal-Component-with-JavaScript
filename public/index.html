@@ -4,12 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="description"
+      content="Simple modal component made with JavaScript, fully adapted for different mobile devices, created to practice working with JavaScript classes."
+    />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
+      rel="preload"
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap"
-      rel="stylesheet"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
     />
-    <script defer src="../src/js/app.js"></script>
+    <noscript
+      ><link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap"
+        rel="stylesheet"
+    /></noscript>
+    <script src="../src/js/app.js" defer></script>
     <title>Modal Component</title>
   </head>
   <body>
@@ -52,14 +63,22 @@
       </p>
       <ul class="box-social">
         <li class="box-social__item">
-          <a href="https://twitter.com/OscarJan18" class="box-social__link">
+          <a
+            href="https://twitter.com/OscarJan18"
+            title="Twitter Profile"
+            class="box-social__link"
+          >
             <svg class="box-social__icon">
               <use href="../src/img/sprite.svg#icon-twitter"></use>
             </svg>
           </a>
         </li>
         <li class="box-social__item">
-          <a href="https://github.com/Oscargjane" class="box-social__link">
+          <a
+            href="https://github.com/Oscargjane"
+            title="GitHub Profile"
+            class="box-social__link"
+          >
             <svg class="box-social__icon">
               <use href="../src/img/sprite.svg#icon-github"></use>
             </svg>
@@ -68,6 +87,7 @@
         <li class="box-social__item">
           <a
             href="https://www.linkedin.com/in/oscar-gonz%C3%A1lez-frontend-dev/"
+            title="Linkedin Profile"
             class="box-social__link"
           >
             <svg class="box-social__icon">
