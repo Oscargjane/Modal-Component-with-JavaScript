@@ -48,8 +48,8 @@ This project is licensed under the ISC License - see the [LICENSE.md](https://gi
 
 ## ☎️ Connect with me
 
-- Twitter - [@OscarJan18](https://twitter.com/OscarJan18 "My Twitter Account")
-- Linkedin - [Oscar González Jané](https://www.linkedin.com/in/oscar-jane-frontend-developer/ "My Linkedin Account")
+- Twitter - [@OscarJan18](https://twitter.com/oscargjane "My Twitter Account")
+- Linkedin - [Oscar González Jané](https://www.linkedin.com/in/oscar-jane-frontend-developer/?locale=en_US "My Linkedin Account")
 
 ## 💫 Deploy
 
